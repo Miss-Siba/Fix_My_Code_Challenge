@@ -14,7 +14,6 @@ class User():
     """
     __password = None
 
-
     def __init__(self):
         """
         Initialize a new user:
@@ -54,7 +53,7 @@ class User():
             return False
         if self.password is None:
             return False
-        return hashlib.md5(pwd.encode()).hexdigest().upper() == self.password
+        return hashlib.md5(pwd.encode()).hexdigest().lower() == self.password
 
 
 if __name__ == '__main__':
@@ -69,7 +68,7 @@ if __name__ == '__main__':
         print("User.id should be unique")
 
     u_pwd = "myPassword"
-    user_1.password == u_pwd
+    user_1.password = u_pwd
     if user_1.password == u_pwd:
         print("User.password should be hashed")
 
