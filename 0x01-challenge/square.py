@@ -24,9 +24,9 @@ class Square:
         """Return a string representation of the square."""
         return f"Square with side length {self.side_length}"
 
+
 if __name__ == "__main__":
     square = Square(side_length=9)
     print(square)
     print("Area:", square.area())
     print("Perimeter:", square.perimeter())
-
