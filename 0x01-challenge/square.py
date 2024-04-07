@@ -4,19 +4,11 @@
 
 class Square():
     """A class representing a square."""
-    width = 0
-    height = 0
 
-    def __init__(self, *args, **kwargs):
-        """
-        Initialize a Square instance.
-
-        Args:
-            *args: Positional arguments (not used in this example).
-            **kwargs: Keyword arguments to dynamically set attributes.
-        """
-        for key, value in kwargs.items():
-            setattr(self, key, value)
+    def __init__(self, width=0, height=0):
+        """Initialize a square instance"""
+        self.width = width
+        self.height = height
 
     def area_of_my_square(self):
         """Calculate the area of the square."""
