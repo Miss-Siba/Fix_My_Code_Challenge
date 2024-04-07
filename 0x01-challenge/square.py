@@ -1,6 +1,8 @@
 #!/usr/bin/python3
+"""Defines a square class"""
 
-class Square:
+
+class Square():
     """A class representing a square."""
     width = 0
     height = 0
@@ -18,19 +20,18 @@ class Square:
 
     def area_of_my_square(self):
         """Calculate the area of the square."""
-        return self.side_length ** 2
+        return self.width * self.height
 
-    def PermiterOfMySquare(self):
+    def perimeter_of_my_square(self):
         """Calculate the perimeter of the square."""
-        return self.side_length * 4
+        return (self.width * 2) + (self.height * 2)
 
     def __str__(self):
-        """Return a string representation of the square."""
-        return "{}".format(self.side_length)
+        return "{}/{}".format(self.width, self.height)
 
 
 if __name__ == "__main__":
-    s = Square(side_length=9)
+    s = Square(width=12, height=9)
     print(s)
     print(s.area_of_my_square())
-    print(s.PermiterOfMySquare())
+    print(s.perimeter_of_my_square())
