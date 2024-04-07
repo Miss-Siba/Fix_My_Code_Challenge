@@ -1,45 +1,32 @@
 #!/usr/bin/python3
-""" Defines a squre class """
 
+class Square:
+    """A class representing a square."""
 
-class square():
-    """Class representing a square."""
-
-    def __init__(self, side_length):
+    def __init__(self, side_length=0):
         """
-        Initialize a Square instance with a given side length.
+        Initialize a Square instance.
 
         Args:
             side_length (int): The length of each side of the square.
         """
         self.side_length = side_length
 
-    def area_of_my_square(self):
-        """ Area of the square """
+    def area(self):
+        """Calculate the area of the square."""
         return self.side_length ** 2
 
-    def PermiterOfMySquare(self):
-        """
-        Calculate the perimeter of the square.
-
-        Returns:
-            int: The perimeter of the square.
-        """
+    def perimeter(self):
+        """Calculate the perimeter of the square."""
         return self.side_length * 4
 
     def __str__(self):
-        """
-        Return a string representation of the square.
-
-        Returns:
-            str: A string describing the square.
-        """
+        """Return a string representation of the square."""
         return f"Square with side length {self.side_length}"
 
-
 if __name__ == "__main__":
+    square = Square(side_length=9)
+    print(square)
+    print("Area:", square.area())
+    print("Perimeter:", square.perimeter())
 
-    s = square(side_length=9)
-    print(s)
-    print(s.area_of_my_square())
-    print(s.PermiterOfMySquare())
