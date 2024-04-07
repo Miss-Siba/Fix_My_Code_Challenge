@@ -2,17 +2,12 @@
 """
 Web server 
 """
-from api.v1.views import *
-import sys
+from api.v1.views import app_views
 from flask import Flask, jsonify, make_response
 
 app = Flask(__name__)
 app.register_blueprint(app_views)
 
-@app.route('/api/v1/status', methods=['GET'])
-def get_status():
-    """Endpoint to get the status"""
-    return jsonify({"status": "OK"})
 
 @app.errorhandler(404)
 def not_found(error):
